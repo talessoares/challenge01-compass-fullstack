@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
   margin: 0;
@@ -225,6 +226,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  font-family: Rubik, sans-serif;
   /* border: 2px solid #dc3545; */
 }
 
@@ -509,37 +511,64 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   margin-bottom: 50px;
+  font-family: Rubik, sans-serif;
 }
 
 .div9 button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.div13 {
+.div10 {
+  text-align: left;
+}
+
+.div10 p {
+  margin-top: 20px;
+}
+
+.div11 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 40px;
+  background-color: #1c140f;
+  border-radius: 15px;
+  margin-bottom: 150px;
+}
+
+.div11 p {
+  margin-top: 20px;
 }
 
 .textSection {
-  flex: 1;
+  flex: 2;
   margin-right: 20px;
+  max-width: 50%;
+  text-align: left;
 }
 
 .formSection {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-end;
   flex: 1;
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  max-width: 450px;
 }
 
 .formSection input {
   padding: 10px;
   font-size: 16px;
-  margin-bottom: 10px;
   width: 100%;
   max-width: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+.formSection input:focus {
+  background-color: #dc720043;
 }
 
 .formSection button {
@@ -547,7 +576,17 @@ body {
   font-size: 16px;
   cursor: pointer;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #dc7000;
+  color: white;
+  margin-left: -1px;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.formSection button:hover {
+  background-color: #0056b3;
 }
 
 .div14 {
