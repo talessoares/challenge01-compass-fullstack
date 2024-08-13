@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -27,9 +29,9 @@ body {
   width: 100%;
   padding: 25px;
   padding-bottom: 1px;
-  /* margin-right: 20%;
-  margin-left: 20%; */
   align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
 .logoDiv a {
@@ -85,7 +87,7 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-left: 210px;
+  margin-left: 150px;
 }
 
 .rectangleLarge {
@@ -116,7 +118,7 @@ body {
 .div13,
 .div14 {
   width: 80%;
-  background-color: #e0e0e0;
+  /* background-color: #e0e0e0; */
   padding: 20px;
   text-align: center;
 }
@@ -125,6 +127,98 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.div2 button {
+  background: linear-gradient(to right, #fa8305, #fb9e3c);
+  border: none;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  margin-top: 20px;
+}
+
+.div2 button:hover {
+  background: linear-gradient(to right, #fb9e3c, #fa8305);
+}
+
+.texts {
+  text-align: left;
+  font-weight: bold;
+  width: 40%;
+  max-width: 600px;
+  padding-right: 10px;
+}
+
+.div2 .texts p:first-of-type {
+  font-weight: bold;
+  color: #e87d0e;
+  -webkit-text-stroke: 1px #000000;
+  margin-bottom: 5%;
+}
+
+.div2 .texts h2 {
+  font-size: 50px;
+  margin-bottom: 5%;
+}
+
+.div2 .texts p:nth-of-type(2) {
+  font-size: 16px;
+  margin-bottom: 5%;
+  line-height: 1.8;
+  font-weight: normal !important;
+}
+
+.images {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  margin-right: -140px;
+  margin-top: -160px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo1 {
+  width: 15% !important;
+  height: 15% !important;
+  max-width: 50px;
+  object-fit: contain;
+  margin-right: 20px;
+  position: relative;
+  top: 150px;
+  right: 50px;
+}
+
+.logo2 {
+  width: 10% !important;
+  height: 10% !important;
+  max-width: 50px;
+  object-fit: contain;
+  margin-right: 20px;
+  position: relative;
+  top: 250px;
+  left: 200px;
+}
+
+.logo3 {
+  width: 15% !important;
+  height: 15% !important;
+  max-width: 50px;
+  object-fit: contain;
+  margin-right: 20px;
+  position: relative;
+  top: 280px;
+  right: 50px;
 }
 
 .div3 {
