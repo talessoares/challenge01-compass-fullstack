@@ -67,6 +67,7 @@ body {
   padding: 13px 25px 13px 25px;
   font-size: 13px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 8px;
 }
 
 .menuDiv a:hover {
@@ -698,15 +699,42 @@ body {
 .div5Contact,
 .div6Contact {
   width: 80%;
-  background-color: #e0e0e0;
+  /* background-color: #e0e0e0; */
   padding: 20px;
   text-align: center;
+}
+
+.bodyContact {
+  background: linear-gradient(to bottom, #2211e7 0%, #383837 100%) !important;
 }
 
 .div2Contact {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.div2Contact p:first-of-type {
+  margin-bottom: 1.5%;
+  font-weight: 400;
+}
+
+.div2Contact span {
+  color: #fa9021;
+  margin-left: 5px;
+}
+
+.div2Contact h2 {
+  margin-bottom: 1.5%;
+  font-size: 33px;
+  font-weight: 600;
+}
+
+.div3Contact img {
+  margin-top: 2.5%;
+  margin-bottom: 2%;
 }
 
 .div4Contact {
@@ -714,7 +742,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #e0e0e0;
+  margin-bottom: 5%;
 }
 
 .div4Contact > div {
@@ -722,17 +750,44 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 100px;
+}
+
+.div4Contact > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  font-weight: 300;
+  padding: 0px 80px;
+  border-left: 1px solid #ffffff; /* Borda na esquerda */
+  border-right: 1px solid #ffffff; /* Borda na direita */
+}
+
+.div4Contact > div:nth-of-type(3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  font-weight: 300;
+}
+
+.div4Contact h3 {
+  font-weight: 400;
+  font-size: 16px;
+  align-self: flex-start;
 }
 
 .socialMediaContainer {
   display: flex;
-  gap: 10px;
   margin-top: 10px;
 }
 
 .socialMediaIcon img {
-  width: 24px;
-  height: 24px;
+  width: 60px;
+  height: auto;
 }
 
 .div6Contact {
