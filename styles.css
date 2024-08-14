@@ -761,8 +761,8 @@ body {
   gap: 20px;
   font-weight: 300;
   padding: 0px 80px;
-  border-left: 1px solid #ffffff; /* Borda na esquerda */
-  border-right: 1px solid #ffffff; /* Borda na direita */
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
 }
 
 .div4Contact > div:nth-of-type(3) {
@@ -790,12 +790,58 @@ body {
   height: auto;
 }
 
-.div6Contact {
+.div5Contact {
+  position: relative;
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
+  padding: 350px;
+  background-color: #1c140f;
+  background-blend-mode: overlay;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  z-index: 1;
+  text-align: center;
+  height: 888px;
+}
+
+.backgroundImage {
+  position: relative;
+  z-index: -1;
+  width: 1048px;
+  height: 257px;
+  top: 200px;
+  left: 250px;
+  object-fit: cover;
+}
+
+.backgroundImage2 {
+  padding-top: 2px;
+  position: relative;
+  z-index: -1;
+  width: 567px;
+  height: 258px;
+  right: 450px;
+  bottom: 200px;
+  object-fit: cover;
+}
+
+.div5Contact h2,
+.div5Contact p,
+.contactForm {
+  z-index: 1;
+}
+
+.div5Contact h2 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 4%;
+}
+
+.div5Contact p {
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .contactForm {
@@ -803,6 +849,10 @@ body {
   flex-direction: column;
   gap: 20px;
   width: 90%;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #4f4f4f;
 }
 
 .formRow {
@@ -821,20 +871,44 @@ body {
   margin-bottom: 5px;
 }
 
+.formField input {
+  height: 56px;
+}
+
 .formField input,
 .formField textarea {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: none;
+  border-radius: 10px;
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 0.6px #cecece;
 }
 
-button {
+.formField textarea {
+  height: 230px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4%;
+}
+
+.div5Contact button {
   padding: 10px 20px;
   font-size: 16px;
+  font-weight: 400;
   cursor: pointer;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
+  background-color: #dc7000;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 193px;
+  height: 57px;
+  justify-content: center;
 }
 
 /* Error Page */
