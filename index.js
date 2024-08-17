@@ -1,9 +1,22 @@
+function showCustomAlert(message, type = "error") {
+  const customAlert = document.getElementById("customAlert");
+  customAlert.textContent = message;
+  customAlert.className = `custom-alert ${type}`;
+  customAlert.style.display = "block";
+
+  setTimeout(function () {
+    customAlert.style.display = "none";
+  }, 5000);
+}
+
 document.getElementById("submitButton").addEventListener("click", function () {
   const email = document.getElementById("emailInput").value;
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-  if (emailRegex.test(email)) {
+  if (email === "") {
+    showCustomAlert("Error! Email field is empty.", "error");
+  } else if (emailRegex.test(email)) {
     let emailsCadastrados =
       JSON.parse(localStorage.getItem("emailsCadastrados")) || [];
 
@@ -14,11 +27,12 @@ document.getElementById("submitButton").addEventListener("click", function () {
       JSON.stringify(emailsCadastrados)
     );
 
-    alert("Sucesso! Email " + email + " cadastrado na newsletter.");
-  } else if (email === "") {
-    alert("Erro! Campo de email vazio.");
+    showCustomAlert(
+      "Success! Email " + email + " has been registered to the newsletter.",
+      "success"
+    );
   } else {
-    alert("Erro! Email " + email + " inválido.");
+    showCustomAlert("Error! Email " + email + " is invalid.", "error");
   }
 
   document.getElementById("emailInput").value = "";
@@ -37,31 +51,31 @@ document
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (!firstName.value.trim()) {
-      alert("Nome é obrigatório.");
+      showCustomAlert("First name is required.", "error");
       firstName.focus();
       return;
     }
 
     if (!lastName.value.trim()) {
-      alert("Sobrenome é obrigatório.");
+      showCustomAlert("Last name is required.", "error");
       lastName.focus();
       return;
     }
 
     if (!email.value.trim()) {
-      alert("Email é obrigatório.");
+      showCustomAlert("Email is required.", "error");
       email.focus();
       return;
     }
 
     if (!emailRegex.test(email.value)) {
-      alert("Por favor, insira um email válido.");
+      showCustomAlert("Email is invalid.", "error");
       email.focus();
       return;
     }
 
     if (!message.value.trim()) {
-      alert("A mensagem é obrigatória.");
+      showCustomAlert("Message is required.", "error");
       message.focus();
       return;
     }
@@ -79,7 +93,7 @@ document
 
     localStorage.setItem("contatos", JSON.stringify(contatos));
 
-    alert("Obrigado! " + firstName.value + ", formulário enviado com sucesso!");
+    showCustomAlert("Success! Your message has been sent.", "success");
 
     firstName.value = "";
     lastName.value = "";
